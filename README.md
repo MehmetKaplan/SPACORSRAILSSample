@@ -23,7 +23,7 @@ sequenceDiagram
 	Content Server -->> JavaScript OnLoad Event: Server some JSON Data
 	JavaScript OnLoad Event -->> JavaScript OnLoad Event: Update content div content
 ```
-![alt tag](readme_images/SequenceDiagram.png)
+![alt tag](readme_images/SequenceDiagram.jpg)
 
 
 Use the same ```Gemfile``` for both container and content for the sake of simplicity:

@@ -32,3 +32,11 @@ gem 'haml'
 gem 'haml-rails'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 ```
+
+- Rails arrangements for container application:
+```Ruby
+cd container/
+rails g controller container
+```
+
+- Rails arrangements for client application:

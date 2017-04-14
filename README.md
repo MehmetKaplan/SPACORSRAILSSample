@@ -8,6 +8,7 @@ In this project we'll try to build a  sample architecture consisting of;
 The structure is and the algorithms are like that:
 
 ```mermaid
+sequenceDiagram
 	Browser -->> Container Server: Request for SPA Page
 	Container Server
 ```

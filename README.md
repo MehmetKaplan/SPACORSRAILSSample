@@ -27,7 +27,10 @@ sequenceDiagram
 ![alt tag](readme_images/SequenceDiagram.jpg)
 
 
-Use the same ```Gemfile``` for both container and content for the sake of simplicity:
+
+Rails and React Arrangements for Container Application:
+-------------------------------------------------------
+The newly added gems to ```Gemfile``` are as follows:
 ```Ruby
 gem 'haml'
 gem 'haml-rails'
@@ -35,13 +38,24 @@ gem 'mysql2', '>= 0.3.18', '< 0.5'
 gem 'react-rails'
 gem 'react-bootstrap-rails'
 ```
-
-Rails and React Arrangements for Container Application:
--------------------------------------------------------
+Do not forget to install the gems.
+```Ruby
+bundle install
+```
+Add a controller to serve the container page and also the to serve the request for JSON data:
 ```Ruby
 cd container/
 rails g controller container
 ```
+
+In the directory ```app/assets``` generate a new file named ```main.js``` which will be the main entrance point for our client side codes. Since we need the page first be loaded, will modify the eventhandler:
+```JavaScript
+window.onload
+```
+
+
+Optional
+========
 
 In the file ```app/assets/javascripts/application.js``` add following lines to include ReactJS support:
 ```JavaScript
@@ -49,8 +63,8 @@ In the file ```app/assets/javascripts/application.js``` add following lines to i
 //= require react_ujs
 //= require react_bootstrap
 ```
-In the directory ```app/assets``` generate a new file named ```main.js``` which will be the main entrance point for our client side codes. And link that file to application by adding following line to our related view:
 
+In future, if you want to add React components, in view side you can use:
 ```haml
 = react_component('main')
 ```

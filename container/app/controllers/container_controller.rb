@@ -3,8 +3,16 @@ class ContainerController < ApplicationController
 	end
 	def data
 		l_retval = Hash.new
-		l_retval['Caption'] = "This is the Caption Text"
-		l_retval['URL'] = "htt://www.google.com"
+		l_retval['ClientTimestamp'] = Request["clienttimestamp"]
+		l_retval['DummyParameter'] = Request["clienttimestamp"]
+		l_retval['ServerTimestamp'] = Time.now.getutc
+		render json: l_retval
+	end
+	def data2
+		l_retval = Hash.new
+		l_retval['ClientTimestamp'] = params["clienttimestamp"]
+		l_retval['DummyParameter'] = params["clienttimestamp"]
+		l_retval['ServerTimestamp'] = Time.now.getutc
 		render json: l_retval
 	end
 end

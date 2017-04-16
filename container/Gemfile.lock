@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actioncable (5.0.2)
       actionpack (= 5.0.2)
@@ -115,6 +116,9 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 5.0.2)
       sprockets-rails (>= 2.0.0)
+    rails-assets-emitter (1.5.3)
+    rails-assets-superagent (3.3.2)
+      rails-assets-emitter (>= 1.1.2, < 2)
     rails-dom-testing (2.0.2)
       activesupport (>= 4.2.0, < 6.0)
       nokogiri (~> 1.6)
@@ -138,7 +142,7 @@ GEM
       execjs
       railties (>= 3.2)
       tilt
-    ruby_parser (3.8.4)
+    ruby_parser (3.9.0)
       sexp_processor (~> 4.1)
     sass (3.4.23)
     sass-rails (5.0.6)
@@ -147,7 +151,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    sexp_processor (4.8.0)
+    sexp_processor (4.9.0)
     spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -194,6 +198,7 @@ DEPENDENCIES
   mysql2 (>= 0.3.18, < 0.5)
   puma (~> 3.0)
   rails (~> 5.0.2)
+  rails-assets-superagent (= 3.3.2)!
   react-bootstrap-rails
   react-rails
   sass-rails (~> 5.0)

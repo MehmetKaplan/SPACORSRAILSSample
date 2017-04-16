@@ -36,7 +36,8 @@ gem 'react-rails'
 gem 'react-bootstrap-rails'
 ```
 
-- Rails and React arrangements for container application:
+Rails and React Arrangements for Container Application:
+-------------------------------------------------------
 ```Ruby
 cd container/
 rails g controller container
@@ -54,4 +55,5 @@ In the directory ```app/assets``` generate a new file named ```main.js``` which 
 = react_component('main')
 ```
 
-- Rails arrangements for client application:
+Rails and React Arrangements for Client Application:
+-------------------------------------------------------

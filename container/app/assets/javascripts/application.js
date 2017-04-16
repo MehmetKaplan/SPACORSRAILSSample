@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-window.onload = function() {
-	alert("Here I am...");
-};
+//= require react
+//= require react_ujs
+//= require react_bootstrap

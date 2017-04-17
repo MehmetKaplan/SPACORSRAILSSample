@@ -4,8 +4,10 @@ class ContainerController < ApplicationController
 	end
 	def datapost
 		l_retval = Hash.new
-		l_retval['ClientTimestamp'] = Request["ClientTimestamp"]
-		l_retval['DummyParameter'] = Request["DummyParameter"]
+		params.permit("ClientTimestamp")
+		params.permit("DummyParameter")
+		l_retval['ClientTimestamp'] = params["ClientTimestamp"] # ["ClientTimestamp"]
+		l_retval['DummyParameter'] = params["DummyParameter"]
 		l_retval['ServerTimestamp'] = Time.now.getutc
 		render json: l_retval
 	end

@@ -56,7 +56,7 @@ window.onload
 We'll skip request forgery control for only the JSON data post action at container side. The related text that Rails documentation provides is as follows:
 
 ```
-Source: http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html
+[link to Source:](http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html)
 ...
 We may want to disable CSRF protection for APIs since they are typically designed to be state-less. That is, the request API client will handle the session for you instead of Rails.
 ...

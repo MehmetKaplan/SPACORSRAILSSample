@@ -53,6 +53,19 @@ In the directory ```app/assets``` generate a new file named ```main.js``` which 
 window.onload
 ```
 
+We'll skip request forgery control for only the JSON data post action at container side. The related text that Rails documentation provides is as follows:
+
+```
+Source: http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html
+...
+We may want to disable CSRF protection for APIs since they are typically designed to be state-less. That is, the request API client will handle the session for you instead of Rails.
+...
+```
+
+```app/container/controllers/container_controller.rb```:
+```Ruby
+	skip_before_action :verify_authenticity_token, only: [:datapost]
+```
 
 Optional
 ========

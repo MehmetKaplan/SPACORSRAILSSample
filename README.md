@@ -29,7 +29,7 @@ sequenceDiagram
 
 
 Rails and React Arrangements for Container Application:
--------------------------------------------------------
+=======================================================
 The newly added gems to ```Gemfile``` are as follows:
 ```Ruby
 gem 'haml'
@@ -80,7 +80,7 @@ We may want to disable CSRF protection for APIs since they are typically designe
 ```
 
 Optional
-========
+--------
 
 In the file ```app/assets/javascripts/application.js``` add following lines to include ReactJS support:
 ```JavaScript
@@ -95,7 +95,7 @@ In future, if you want to add React components, in view side you can use:
 ```
 
 Rails and React Arrangements for Client Application:
--------------------------------------------------------
+====================================================
 
 The newly added gems to ```Gemfile``` are as follows:
 ```Ruby
@@ -139,5 +139,6 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 end
 ```
 *Above code only allows requests that are originated by the javascript codes that are originally served to browser by localhost:3000. For security reasons do not allow every url if possible. It is always allow known sites!*
+
 
 

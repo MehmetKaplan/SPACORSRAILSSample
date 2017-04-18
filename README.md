@@ -47,6 +47,17 @@ Add a controller to serve the container page and also the to serve the request f
 cd container/
 rails g controller container
 ```
+We'll have 3 routes. First one is the main container page. The other two are responding API's for the requests that are coming from JavaSciript code of the main container page.
+
+```Ruby
+  get '/', :to => 'container#root'
+  post '/datapost', :to => 'container#datapost', :constraint => {:format => :json}
+  get '/dataget', :to => 'container#dataget'
+```
+```Ruby
+rake routes
+```
+
 
 In the directory ```app/assets``` generate a new file named ```main.js``` which will be the main entrance point for our client side codes. Since we need the page first be loaded, will modify the eventhandler:
 ```JavaScript
@@ -85,3 +96,48 @@ In future, if you want to add React components, in view side you can use:
 
 Rails and React Arrangements for Client Application:
 -------------------------------------------------------
+
+The newly added gems to ```Gemfile``` are as follows:
+```Ruby
+gem 'haml'
+gem 'haml-rails'
+gem 'mysql2', '>= 0.3.18', '< 0.5'
+gem 'react-rails'
+gem 'react-bootstrap-rails'
+gem 'rack-cors'
+```
+Do not forget to install the gems.
+```Ruby
+bundle install
+```
+Add a controller to serve the container page and also the to serve the request for JSON data:
+```Ruby
+cd content/
+rails g controller content
+```
+
+We'll have 2 routes. They are going to be responsible for GET and POST requests coming from the main container page. 
+
+```Ruby
+  post '/datapost', :to => 'content#datapost', :constraint => {:format => :json}
+  get '/dataget', :to => 'contet#dataget'
+```
+
+```Ruby
+rake routes
+```
+Allow the incoming CORS requests with the help of ```rack-cors``` gem, by configuring file ```config/initializers/cors.rb```:
+
+```Ruby
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins 'localhost:3000'
+    resource '*',
+      headers: :any,
+      methods: %i(get post put patch delete options head)
+  end
+end
+```
+*Above code only allows requests that are originated by the javascript codes that are originally served to browser by localhost:3000. For security reasons do not allow every url if possible. It is always allow known sites!*
+
+

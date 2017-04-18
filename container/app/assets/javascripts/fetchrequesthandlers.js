@@ -136,9 +136,8 @@ fetch_data_post_different_origin = function(p_uri, p_params_as_json){
 					return response.json();
 				})
 				.then(function(p_json) {
-					document.getElementById("container").innerHTML =
-						document.getElementById("container").innerHTML + 
-						'This is from container: ' +
+					document.getElementById("content").innerHTML =
+						'This is from content: ' +
 						p_json['ClientTimestamp'] + ' ' + 
 						p_json['DummyParameter'] + ' ' + 
 						p_json['ServerTimestamp'];

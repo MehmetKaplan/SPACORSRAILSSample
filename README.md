@@ -138,7 +138,11 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 end
 ```
-*Above code only allows requests that are originated by the javascript codes that are originally served to browser by localhost:3000. For security reasons do not allow every url if possible. It is always allow known sites!*
+**Above code only allows requests that are originated by the javascript codes that are originally served to browser by localhost:3000. For security reasons do not allow every url if possible. It is always allow known sites! So modify your configuraion of "origins" above accordingly. **
 
 
 
+TODO
+====
+1. Make ```fetchrequesthandlers.js``` file a library by modifying codes generic.
+2. Make 

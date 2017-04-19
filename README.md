@@ -139,4 +139,4 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 end
 ```
 *Above code only allows requests that are originated by the javascript codes that are originally served to browser by localhost:3000. For security reasons do not allow every url if possible. As a principle, always try to allow only known sites!*
-**So modify your configuraion of "origins" above accordingly.**
+**So modify your configuration of "origins" above accordingly.**

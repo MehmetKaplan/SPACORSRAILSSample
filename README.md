@@ -93,6 +93,7 @@ In future, if you want to add React components, in view side you can use:
 ```haml
 = react_component('main')
 ```
+For a good explanation of usage, visit: [https://github.com/reactjs/react-rails/blob/master/README.md#use-with-asset-pipeline] (https://github.com/reactjs/react-rails/blob/master/README.md#use-with-asset-pipeline).
 
 Rails and React Arrangements for Client Application:
 ====================================================

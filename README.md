@@ -1,12 +1,12 @@
 # SPACORSRAILSSample
 
 In this project we'll try to build a  sample architecture consisting of;
-	- a container server,
-	- a content server,
-	- an SPA page
+- a container API server, (the "container" rails application under this repo)
+- a content API server, (the "content" rails application under this repo)
+- an SPA page (which is also in the "container" rails application under this repo)
 using Ruby on Rails and ReactJS. (ReactJS is not that relevant for our purpose.)
 
-The structure is and the algorithms are like that:
+The algorithm is like that:
 
 ```mermaid
 sequenceDiagram

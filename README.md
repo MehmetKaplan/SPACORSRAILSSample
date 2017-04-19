@@ -59,7 +59,7 @@ rake routes
 ```
 
 
-In the directory ```app/assets``` generate a new file named ```main.js``` which will be the main entrance point for our client side codes. Since we need the page first be loaded, will modify the eventhandler:
+In the directory ```app/assets``` generate a new file named ```usagesample.js``` which will be the main entrance point for our client side codes (by calling ```window.onload``` function). Since we need the page first be loaded, will modify the eventhandler:
 ```JavaScript
 window.onload
 ```
@@ -140,9 +140,3 @@ end
 ```
 *Above code only allows requests that are originated by the javascript codes that are originally served to browser by localhost:3000. For security reasons do not allow every url if possible. It is always allow known sites!*
 **So modify your configuraion of "origins" above accordingly.**
-
-
-
-TODO
-====
-Make ```fetchrequesthandlers.js``` file a library by modifying codes generic.

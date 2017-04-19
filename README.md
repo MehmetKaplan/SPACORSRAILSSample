@@ -88,12 +88,35 @@ In the file ```app/assets/javascripts/application.js``` add following lines to i
 //= require react_ujs
 //= require react_bootstrap
 ```
+For a good explanation of usage, visit: https://github.com/reactjs/react-rails/blob/master/README.md#use-with-asset-pipeline.
 
+Run following command to include new react items:
+```Ruby
+rails g react:install
+```
+Add following component class definitions:
+```container/app/assets/javascripts/components/container.jsx```
+```JavaScript
+class Container extends React.Component {
+  render() {
+    return <div><i>{this.props.kaplancustomtext}</i></div>    
+  }
+}
+```
+```container/app/assets/javascripts/components/content.jsx```
+```JavaScript
+class Content extends React.Component {
+  render() {
+    return <div><i>{this.props.kaplancustomtext}</i></div>    
+  }
+}
+```
 In future, if you want to add React components, in view side you can use:
 ```haml
-= react_component('main')
+= react_component("Container", {kaplancustomtext: "Container: this text is coming from root.html.haml"})
+
+= react_component("Content", {kaplancustomtext: "Content: this text is coming from root.html.haml"})
 ```
-For a good explanation of usage, visit: https://github.com/reactjs/react-rails/blob/master/README.md#use-with-asset-pipeline.
 
 Rails and React Arrangements for Client Application:
 ====================================================

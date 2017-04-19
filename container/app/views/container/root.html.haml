@@ -1,3 +1,10 @@
 .container_{:id => "container_"}
 	.container{:id => "container"}
 	.content{:id => "content"}
+
+%hr
+
+= react_component("Container", {kaplancustomtext: "Container: this text is coming from root.html.haml"})
+
+= react_component("Content", {kaplancustomtext: "Content: this text is coming from root.html.haml"})
+

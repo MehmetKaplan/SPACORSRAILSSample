@@ -14,11 +14,11 @@ window.onload = function() {
 		// fetch_data_post_different_origin('http://localhost:3001/datapost', l_params_as_json)
 
 		l_function_to_execute_with_result_json = function(p_call_result_as_json) {
-			document.getElementById("container").innerHTML += "<br>" +
-				'This is from container server with a GET request from SAME ORIGIN: ' +
+			var l_text_to_add = '<br>' + 'This is from container server with a GET request from SAME ORIGIN: ' +
 				p_call_result_as_json['ClientTimestamp'] + ' ' + 
 				p_call_result_as_json['DummyParameter'] + ' ' + 
 				p_call_result_as_json['ServerTimestamp'];
+			document.getElementById("container").innerHTML += l_text_to_add;
 		};
 		fetch_data_generic(l_function_to_execute_with_result_json, '/dataget', 'GET', l_params_as_json, 'SAME', '');
 

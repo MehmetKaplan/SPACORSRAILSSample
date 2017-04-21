@@ -118,6 +118,13 @@ In future, if you want to add React components, in view side you can use:
 = react_component("Content", {kaplancustomtext: "Content: this text is coming from root.html.haml"})
 ```
 
+React objects can be generated like, sending props as ```kaplancustomtext``` and adding components to HTML elements by finding the elements from document:
+```JavaScript
+			ReactDOM.render(React.createElement(Container, {kaplancustomtext: "This text is coming from usagesample.js: " + l_text_to_add}), 
+				document.getElementById("containerreact2")
+			);
+```
+
 Rails and React Arrangements for Client Application:
 ====================================================
 

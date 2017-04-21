@@ -19,9 +19,11 @@ window.onload = function() {
 				p_call_result_as_json['DummyParameter'] + ' ' + 
 				p_call_result_as_json['ServerTimestamp'];
 			document.getElementById("container").innerHTML += l_text_to_add;
+			ReactDOM.render(React.createElement(Container, {kaplancustomtext: "Obarahaeyy"}), 
+				document.getElementById("containerreact")
+			);
 		};
 		fetch_data_generic(l_function_to_execute_with_result_json, '/dataget', 'GET', l_params_as_json, 'SAME', '');
-
 
 		l_function_to_execute_with_result_json = function(p_call_result_as_json) {
 			document.getElementById("container").innerHTML += "<br>" +

@@ -19,7 +19,7 @@ window.onload = function() {
 				p_call_result_as_json['DummyParameter'] + ' ' + 
 				p_call_result_as_json['ServerTimestamp'];
 			document.getElementById("container").innerHTML += l_text_to_add;
-			ReactDOM.render(React.createElement(Container, {kaplancustomtext: "Obarahaeyy"}), 
+			ReactDOM.render(React.createElement(Container, {kaplancustomtext: "This text is coming from usagesample.js."}), 
 				document.getElementById("containerreact")
 			);
 		};

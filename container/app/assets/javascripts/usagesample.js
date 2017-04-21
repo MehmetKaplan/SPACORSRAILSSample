@@ -20,7 +20,7 @@ window.onload = function() {
 				p_call_result_as_json['ServerTimestamp'];
 			document.getElementById("container").innerHTML += l_text_to_add;
 			ReactDOM.render(React.createElement(Container, {kaplancustomtext: "This text is coming from usagesample.js: " + l_text_to_add}), 
-				document.getElementById("containerreact")
+				document.getElementById("containerreact1")
 			);
 		};
 		fetch_data_generic(l_function_to_execute_with_result_json, '/dataget', 'GET', l_params_as_json, 'SAME', '');
@@ -33,7 +33,7 @@ window.onload = function() {
 				p_call_result_as_json['ServerTimestamp'];
 			document.getElementById("container").innerHTML += l_text_to_add;
 			ReactDOM.render(React.createElement(Container, {kaplancustomtext: "This text is coming from usagesample.js: " + l_text_to_add}), 
-				document.getElementById("containerreact")
+				document.getElementById("containerreact2")
 			);
 		};
 		fetch_data_generic(l_function_to_execute_with_result_json, '/datapost', 'POST', l_params_as_json, 'SAME', '');
@@ -44,9 +44,9 @@ window.onload = function() {
 				p_call_result_as_json['ClientTimestamp'] + ' ' + 
 				p_call_result_as_json['DummyParameter'] + ' ' + 
 				p_call_result_as_json['ServerTimestamp'];
-			document.getElementById("content").innerHTML += var l_text_to_add
+			document.getElementById("content").innerHTML += l_text_to_add;
 			ReactDOM.render(React.createElement(Content, {kaplancustomtext: "This text is coming from usagesample.js: " + l_text_to_add}), 
-				document.getElementById("contentreact")
+				document.getElementById("contentreact1")
 			);
 		};
 		fetch_data_generic(l_function_to_execute_with_result_json, 'http://localhost:3001/dataget', 'GET', l_params_as_json, 'SAME', '');
@@ -57,9 +57,9 @@ window.onload = function() {
 				p_call_result_as_json['ClientTimestamp'] + ' ' + 
 				p_call_result_as_json['DummyParameter'] + ' ' + 
 				p_call_result_as_json['ServerTimestamp'];
-			document.getElementById("content").innerHTML += var l_text_to_add
+			document.getElementById("content").innerHTML += l_text_to_add;
 			ReactDOM.render(React.createElement(Content, {kaplancustomtext: "This text is coming from usagesample.js: " + l_text_to_add}), 
-				document.getElementById("contentreact")
+				document.getElementById("contentreact2")
 			);
 		};
 		fetch_data_generic(l_function_to_execute_with_result_json, 'http://localhost:3001/datapost', 'POST', l_params_as_json, 'SAME', '');

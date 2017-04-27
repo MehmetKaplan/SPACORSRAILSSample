@@ -1,0 +1,98 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'babel-preset-env',
+1 verbose cli   '--save-dev' ]
+2 info using npm@2.15.11
+3 info using node@v4.8.0
+4 verbose install initial load of /media/sf_SharedFolder/SPACORSRAILSSample/container/package.json
+5 verbose readDependencies loading dependencies from /media/sf_SharedFolder/SPACORSRAILSSample/container/package.json
+6 silly cache add args [ 'babel-preset-env', null ]
+7 verbose cache add spec babel-preset-env
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'babel-preset-env',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'babel-preset-env',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed babel-preset-env@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for babel-preset-env
+11 info addNameTag [ 'babel-preset-env', 'latest' ]
+12 silly mapToRegistry name babel-preset-env
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'babel-preset-env',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'babel-preset-env',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/babel-preset-env
+17 verbose addNameTag registry:https://registry.npmjs.org/babel-preset-env not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/babel-preset-env
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 8:30:04 AM
+21 verbose request id ab27f899b7214c95
+22 verbose etag W/"58fc6fbc-27ad3"
+23 verbose lastModified Sun, 23 Apr 2017 09:11:24 GMT
+24 http request GET https://registry.npmjs.org/babel-preset-env
+25 http 304 https://registry.npmjs.org/babel-preset-env
+26 verbose headers { date: 'Mon, 24 Apr 2017 05:30:06 GMT',
+26 verbose headers   via: '1.1 varnish',
+26 verbose headers   'cache-control': 'max-age=300',
+26 verbose headers   etag: 'W/"58fc6fbc-27ad3"',
+26 verbose headers   age: '211',
+26 verbose headers   connection: 'keep-alive',
+26 verbose headers   'x-served-by': 'cache-sin18026-SIN',
+26 verbose headers   'x-cache': 'HIT',
+26 verbose headers   'x-cache-hits': '1',
+26 verbose headers   'x-timer': 'S1493011807.865397,VS0,VE0',
+26 verbose headers   vary: 'Accept-Encoding' }
+27 silly get cb [ 304,
+27 silly get   { date: 'Mon, 24 Apr 2017 05:30:06 GMT',
+27 silly get     via: '1.1 varnish',
+27 silly get     'cache-control': 'max-age=300',
+27 silly get     etag: 'W/"58fc6fbc-27ad3"',
+27 silly get     age: '211',
+27 silly get     connection: 'keep-alive',
+27 silly get     'x-served-by': 'cache-sin18026-SIN',
+27 silly get     'x-cache': 'HIT',
+27 silly get     'x-cache-hits': '1',
+27 silly get     'x-timer': 'S1493011807.865397,VS0,VE0',
+27 silly get     vary: 'Accept-Encoding' } ]
+28 verbose etag https://registry.npmjs.org/babel-preset-env from cache
+29 verbose get saving babel-preset-env to /home/kaplan/.npm/registry.npmjs.org/babel-preset-env/.cache.json
+30 verbose correctMkdir /home/kaplan/.npm correctMkdir not in flight; initializing
+31 silly addNameTag next cb for babel-preset-env with tag latest
+32 silly addNamed babel-preset-env@1.4.0
+33 verbose addNamed "1.4.0" is a plain semver version for babel-preset-env
+34 verbose stack Error: Failed to parse json
+34 verbose stack No data, empty input at 1:1
+34 verbose stack
+34 verbose stack ^
+34 verbose stack     at parseError (/usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:390:11)
+34 verbose stack     at parseJson (/usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:79:23)
+34 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
+34 verbose stack     at /usr/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+34 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:380:3)
+35 verbose cwd /media/sf_SharedFolder/SPACORSRAILSSample/container
+36 error Linux 4.8.0-46-generic
+37 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "babel-preset-env" "--save-dev"
+38 error node v4.8.0
+39 error npm  v2.15.11
+40 error file /home/kaplan/.npm/babel-preset-env/1.4.0/package/package.json
+41 error code EJSONPARSE
+42 error Failed to parse json
+42 error No data, empty input at 1:1
+42 error
+42 error ^
+43 error File: /home/kaplan/.npm/babel-preset-env/1.4.0/package/package.json
+44 error Failed to parse package.json data.
+44 error package.json must be actual JSON, not just JavaScript.
+44 error
+44 error This is not a bug in npm.
+44 error Tell the package author to fix their package.json file. JSON.parse
+45 verbose exit [ 1, true ]

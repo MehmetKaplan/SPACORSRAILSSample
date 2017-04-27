@@ -36,7 +36,8 @@ gem 'haml'
 gem 'haml-rails'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 gem 'react-rails'
-gem 'react-bootstrap-rails'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 ```
 Do not forget to install the gems.
 ```Ruby
@@ -86,7 +87,6 @@ In the file ```app/assets/javascripts/application.js``` add following lines to i
 ```JavaScript
 //= require react
 //= require react_ujs
-//= require react_bootstrap
 ```
 For a good explanation of usage, visit: https://github.com/reactjs/react-rails/blob/master/README.md#use-with-asset-pipeline.
 

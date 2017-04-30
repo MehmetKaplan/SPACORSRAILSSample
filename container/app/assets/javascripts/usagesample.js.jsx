@@ -24,16 +24,16 @@ window.onload = function() {
 			);
 
 			ReactDOM.render(
-				 <div class="container">
-							<div class="row">
-								<div class="col-sm-10 col-sm-offest-1">
-										<div class="col-sm-4">
+				 <div className="container">
+							<div className="row">
+								<div className="col-sm-10 col-sm-offest-1">
+										<div className="col-sm-4">
 											Here comes your card 1
 										</div>
-										<div class="col-sm-4">
+										<div className="col-sm-4">
 											Here comes your card 2
 										</div>
-										<div class="col-sm-4">
+										<div className="col-sm-4">
 											Here comes your card 3
 										</div>
 
@@ -43,13 +43,6 @@ window.onload = function() {
 				document.getElementById('containerreact1')
 			);
 
-/*
-			var button = React.DOM.button({
-				className: "btn btn-lg btn-success",
-				children: "Register"
-			});
-			ReactDOM.render(button, document.getElementById("containerreact1"));
-*/
 		};
 		fetch_data_generic(l_function_to_execute_with_result_json, '/dataget', 'GET', l_params_as_json, 'SAME', '');
 

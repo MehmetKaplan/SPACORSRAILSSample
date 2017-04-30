@@ -80,7 +80,7 @@ We may want to disable CSRF protection for APIs since they are typically designe
 	skip_before_action :verify_authenticity_token, only: [:datapost]
 ```
 
-Optional
+Optional 1 React
 --------
 
 In the file ```app/assets/javascripts/application.js``` add following lines to include ReactJS support:
@@ -88,12 +88,15 @@ In the file ```app/assets/javascripts/application.js``` add following lines to i
 //= require react
 //= require react_ujs
 ```
-For a good explanation of usage, visit: https://github.com/reactjs/react-rails/blob/master/README.md#use-with-asset-pipeline.
 
 Run following command to include new react items:
 ```Ruby
 rails g react:install
 ```
+*The most important property is after you do this, you can generate react components in ```.jsx``` files.* For a good explanation of usage, visit: https://github.com/reactjs/react-rails/blob/master/README.md#use-with-asset-pipeline.
+
+
+
 Add following component class definitions:
 ```container/app/assets/javascripts/components/container.jsx```
 ```JavaScript
@@ -111,30 +114,55 @@ class Content extends React.Component {
   }
 }
 ```
-In future, if you want to add React components, in view side you can use:
+*At the server*, to add an instance of a react component, in view side you can use:
 ```haml
 = react_component("Container", {kaplancustomtext: "Container: this text is coming from root.html.haml"})
 
 = react_component("Content", {kaplancustomtext: "Content: this text is coming from root.html.haml"})
 ```
 
-React objects can be generated like, sending props as ```kaplancustomtext``` and adding components to HTML elements by finding the elements from document:
+*At the client*, React objects can be generated like, sending props as ```kaplancustomtext``` and adding components to HTML elements by finding the elements from document:
 ```JavaScript
 			ReactDOM.render(React.createElement(Container, {kaplancustomtext: "This text is coming from usagesample.js: " + l_text_to_add}), 
 				document.getElementById("containerreact2")
 			);
 ```
 
+Optional 2 Bootstrap
+--------
+A good description is here: https://launchschool.com/blog/integrating-rails-and-bootstrap-part-1
+
+We'll follow it, with respect to our purpose:
+
+- Rename ```app/assets/stylesheets/application.css``` to ```app/assets/stylesheets/application.css.sass```
+- Add following to ```app/assets/stylesheets/application.css.sass```:
+```css
+@import "bootstrap-sprockets";
+@import "bootstrap";
+```
+- Include following line to ```app/assets/javascripts/application.js```, somewhere **after*** ```//= require jquery``` and ```//= require_tree .``` **must be the last line**.
+```JavaScript
+//= require jquery
+...
+//= require bootstrap-sprockets
+...
+//= require_tree .
+```
+
+- Place your CSS and JS files to related app/assets firectories.
+
+At this point the most important thing to know is, by adding bootstrap html templates to your ReactDOM, you can enjoy bootstrap appearances.
+
+One final note about Bootstrap CSS classes. HTML elements are mapped to CSS classes by adding ```class``` attribute to elements. The most commonly used ones are for, ```div```; ```container```,```row```, ```col-XXXXXX```. And also exists special classes for tables, buttons, etc...
+
+BURADA KALDIK ----> http://stackoverflow.com/questions/22334104/reactjs-append-an-element-instead-of-replacing
+
+
 Rails and React Arrangements for Client Application:
 ====================================================
 
 The newly added gems to ```Gemfile``` are as follows:
 ```Ruby
-gem 'haml'
-gem 'haml-rails'
-gem 'mysql2', '>= 0.3.18', '< 0.5'
-gem 'react-rails'
-gem 'react-bootstrap-rails'
 gem 'rack-cors'
 ```
 Do not forget to install the gems.

@@ -1,0 +1,51 @@
+<div class="card-container manual-flip">
+	<div class="card">
+		<div class="front">
+			<div class="cover">
+				<img src={this.props.card_cover_image}/>
+			</div> <!-- end cover -->
+			<div class="user">
+				<img class="img-circle" src={this.props.card_circle_image}/>
+			</div> <!-- end user -->
+			<div class="content">
+				<div class="main">
+					<h3 class="name">{this.props.card_name}</h3>
+					<p class="profession">{this.props.card_title}</p>
+					<p class="text-center">{this.props.card_self_description}</p>
+				</div> <!-- end main -->
+				<div class="footer">
+					<button class="btn btn-simple" onclick="rotateCard(this)">
+						<i class="fa fa-mail-forward"></i> {this.props.card_encourage_to_check_content}
+					</button>
+				</div> <!-- end footer -->
+			</div> <!-- end content -->
+		</div> <!-- end front panel -->
+		<div class="back">
+			<div class="header">
+				<h5 class="motto">{this.props.card_back_header}</h5>
+			</div> <!-- end header -->
+			<div class="content">
+				<div class="main">
+					<h4 class="text-center">{this.props.card_back_title}</h4>
+					<p class="text-center">{this.props.card_back_content}</p>
+					<div class="stats-container">
+						<div class="stats">
+							<h4>{this.props.card_back_info_head}</h4>
+							<p>{this.props.card_back_info_content}</p>
+						</div> <!-- end stats -->
+					</div><!-- end stats-container -->
+				</div> <!-- end main -->
+			</div><!-- end content -->
+			<div class="footer">
+				<button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+					<i class="fa fa-reply"></i> {this.props.card_back_to_front}
+				</button>
+				<div class="social-links text-center">
+					<a href="http://facebook.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+					<a href="http://goofgle.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+					<a href="http://twitter.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+				</div><!-- end social links -->
+			</div><!-- end footer -->
+		</div> <!-- end back panel -->
+	</div> <!-- end card -->
+</div> <!-- end card-container -->

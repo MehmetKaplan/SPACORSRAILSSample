@@ -24,7 +24,7 @@ class RotatingCards extends React.Component {
 												<p className="text-center">{p_card_as_json.card_self_description}</p>
 											</div>
 											<div className="footer">
-												<button className="btn btn-simple" onClick={() => {window.rotateCard(this)}  }>
+												<button className="btn btn-simple" id={"btn_card_" + p_card_as_json.id} onClick={() => {window.rotateCard("btn_card_" + p_card_as_json.id)}  }>
 													<i className="fa fa-mail-forward"></i> {p_card_as_json.card_encourage_to_check_content}
 												</button>
 											</div>
@@ -47,7 +47,7 @@ class RotatingCards extends React.Component {
 											</div>
 										</div>
 										<div className="footer">
-											<button className="btn btn-simple" rel="tooltip" title="Flip Card" onClick={() => {window.rotateCard(this)} }>
+											<button className="btn btn-simple" rel="tooltip" id={"btn_card_back_" + p_card_as_json.id} title="Flip Card" onClick={() => {window.rotateCard("btn_card_back_" + p_card_as_json.id)} }>
 												<i className="fa fa-reply"></i> {p_card_as_json.card_back_to_front}
 											</button>
 											<div className="social-links text-center">

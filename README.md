@@ -155,8 +155,6 @@ At this point the most important thing to know is, by adding bootstrap html temp
 
 One final note about Bootstrap CSS classes. HTML elements are mapped to CSS classes by adding ```class``` attribute to elements. The most commonly used ones are for, ```div```; ```container```,```row```, ```col-XXXXXX```. And also exists special classes for tables, buttons, etc...
 
-BURADA KALDIK ----> http://stackoverflow.com/questions/22334104/reactjs-append-an-element-instead-of-replacing
-
 
 Rails and React Arrangements for Client Application:
 ====================================================

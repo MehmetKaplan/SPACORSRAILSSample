@@ -70,7 +70,7 @@ window.onload = function() {
 				document.getElementById("contentreact1")
 			);
 		};
-		fetch_data_generic(l_function_to_execute_with_result_json, 'http://localhost:3001/dataget', 'GET', l_params_as_json, 'SAME', '');
+		fetch_data_generic(l_function_to_execute_with_result_json, 'http://localhost:3001/dataget', 'GET', l_params_as_json, 'CROSS', '');
 	
 		l_function_to_execute_with_result_json = function(p_call_result_as_json) {
 			var l_text_to_add = "<br>" +
@@ -83,7 +83,7 @@ window.onload = function() {
 				document.getElementById("contentreact2")
 			);
 		};
-		fetch_data_generic(l_function_to_execute_with_result_json, 'http://localhost:3001/datapost', 'POST', l_params_as_json, 'SAME', '');
+		fetch_data_generic(l_function_to_execute_with_result_json, 'http://localhost:3001/datapost', 'POST', l_params_as_json, 'CROSS', '');
 
 		var l_cards_as_array_of_json = [
 													{

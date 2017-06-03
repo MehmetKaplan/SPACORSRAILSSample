@@ -149,7 +149,7 @@ We'll follow it, with respect to our purpose:
 //= require_tree .
 ```
 
-- Place your CSS and JS files to related app/assets firectories.
+- Place your CSS and JS files to related app/assets directories.
 
 At this point the most important thing to know is, by adding bootstrap html templates to your ReactDOM, you can enjoy bootstrap appearances.
 
